@@ -45,5 +45,6 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: hashicorp/setup-terraform@v4
-      - run: terraform init -backend-config="key=prod.tfstate" # create a prod environment state file in the S3 bucket
+      - run: terraform init -backend-config="key=prod.tfstate" # create a prod environment state file in the S3 bucket - Harsh Kumar
       - run: terraform apply -auto-approve -var-file=envs/prod.tfvars
+      
